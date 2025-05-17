@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CERBERUS TECH</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Encabezado principal con logo y menú de navegación -->
+     <!-- falta colocar logo a la izquierda y a la derecha el menu  -->
+  <header>
+    <div class="contenedor">
+      <div class="logo">CERBERUS TECH</div>
+      <nav>
+        <ul class="menu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a>
+            <ul class="submenu">
+              <li><a href="pentesting.hmtl">Pentesting</a></li>
+              <li><a href="auditorias.hmtl">Auditorías de Seguridad</a></li>
+              <li><a href="ciberseguridad.hmtl">Ciberseguridad</a></li>
+              <li><a href="forense.hmtl">Análisis Forense</a></li>
+              <li><a href="formacion.hmtl">Formación</a></li>
+              <li><a href="capacitacion.hmtl">Capacitación</a></li>
+            </ul>
+          </li>
+          <li><a href="nosotros.hmtl">Nosotros</a></li>
+          <li><a href="clientes.hmtl">Clientes</a></li>
+          <li><a href="blogs.hmtl">Blogs</a></li>
+          <li><a href="contacto.hmtl">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sección principal -->
+    <section class="hero" id="inicio" style="background-image: url('https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1400&q=80'); background-size: cover; background-position: center;">
+      <div class="contenedor">
+        <h1>Expertos en Hacking Ético</h1>
+        <p>Protegemos tus sistemas antes de que lo hagan otros.</p>
+        <a href="#contacto" class="boton">Solicita una consultoría</a>
+      </div>
+    </section>
+
+
+<!-- Sección Servicios -->
+<section class="seccion" id="servicios">
+  <div class="contenedor">
+    <h2>Servicios Profesionales</h2>
+    <div class="grid-servicios">
+      <a href="pentesting.html" class="servicio" id="pentesting">
+        <img src="https://img.icons8.com/ios-filled/100/hacker.png" alt="Pentesting" />
+        <h3>Pentesting</h3>
+        <p>Simulamos ataques reales para detectar vulnerabilidades antes que los atacantes.</p>
+      </a>
+      <a href="auditorias.html" class="servicio" id="auditorias">
+        <img src="https://img.icons8.com/ios-filled/100/security-configuration.png" alt="Auditorías" />
+        <h3>Auditorías de Seguridad</h3>
+        <p>Revisamos la infraestructura TI de tu empresa para identificar fallas y malas prácticas.</p>
+      </a>
+      <a href="ciberseguridad.html" class="servicio" id="ciberseguridad">
+        <img src="https://img.icons8.com/ios-filled/100/shield.png" alt="Ciberseguridad" />
+        <h3>Ciberseguridad</h3>
+        <p>Implementamos medidas proactivas para proteger tus datos y redes.</p>
+      </a>
+      <a href="forense.html" class="servicio" id="forense">
+        <img src="https://img.icons8.com/ios-filled/100/fingerprint.png" alt="Análisis Forense" />
+        <h3>Análisis Forense Digital</h3>
+        <p>Investigamos incidentes para identificar responsables y prevenir futuros ataques.</p>
+      </a>
+      <a href="formacion.html" class="servicio" id="formacion">
+        <img src="https://img.icons8.com/ios-filled/100/education.png" alt="Formación" />
+        <h3>Formación</h3>
+        <p>Capacitamos a tu equipo en ciberseguridad ofensiva y defensiva.</p>
+      </a>
+      <a href="capacitacion.html" class="servicio" id="capacitacion">
+        <img src="https://img.icons8.com/ios-filled/100/training.png" alt="Capacitación" />
+        <h3>Capacitación</h3>
+        <p>Sesiones prácticas para elevar el nivel de defensa de tu organización.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Sección reporte de vulnerabilidades -->
+    <section class="seccion gris" id="vulnerabilidades">
+      <div class="contenedor">
+        <h2>Resportamos vulnerabilidades para :</h2>
+
+      </div>
+    </section>
+
+    <!-- Sección Clientes -->
+    <section class="seccion" id="clientes">
+      <div class="contenedor">
+        <h2>Clientes que confían en nosotros</h2>
+        <div class="logos-clientes">
+          <img src="https://img.icons8.com/ios-filled/100/hacker.png" alt="UNMSM" />
+          <img src="https://img.icons8.com/ios-filled/100/hacker.png" alt="Banco Nación" />
+          <img src="https://img.icons8.com/ios-filled/100/hacker.png" alt="Sunat" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section class="seccion gris" id="contacto">
+      <div class="contenedor">
+        <h2>Contáctanos</h2>
+        <form class="formulario-contacto">
+          <input type="text" placeholder="Tu nombre completo" required />
+          <input type="email" placeholder="Tu correo electrónico" required />
+          <input type="number" placeholder="Celular" required />
+          <textarea placeholder="Escribe tu mensaje aquí ..." required></textarea>
+          <button type="submit" class="boton">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Información adicional y Newsletter -->
+    <section class="info-newsletter">
+      <div class="contenedor dos-columnas">
+        <div class="columna">
+          <h3>Servicios</h3>
+          <ul>
+              <li><a href="#pentesting">Pentesting</a></li>
+              <li><a href="#auditorias">Auditorías de Seguridad</a></li>
+              <li><a href="#ciberseguridad">Ciberseguridad</a></li>
+              <li><a href="#forense">Análisis Forense</a></li>
+              <li><a href="#formacion">Formación</a></li>
+              <li><a href="#capacitacion">Capacitación</a></li>
+          </ul>
+        </div>
+
+        <div class="columna">
+          <h3>Suscribirse a nuestro boletín</h3>
+          <p>Recibe noticias y consejos sobre ciberseguridad.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Ingresa tu correo electrónico" required>
+            <button type="submit">Suscribirse</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página con redes sociales -->
+  <footer>
+    <div class="contenedor footer-flex">
+      <p class="footer-text">&copy; 2025 CERBERUS TECH. Todos los derechos reservados.</p>
+      <div class="redes-sociales">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

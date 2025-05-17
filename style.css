@@ -1,0 +1,446 @@
+/*==================== RESET Y BODY ====================*/
+/* Reset básico para consistencia en todos los navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografía y fondo general */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: #0d1118;      /* fondo principal */
+  color: #ecf0f1;           /* texto claro */
+}
+
+/*==================== CONTENEDOR ====================*/
+/* Wrapper central para ancho y padding uniforme */
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/*==================== HEADER & NAV ====================*/
+/* Barra superior fija */
+header {
+  background: #11151f;       /* ligeramente más claro que body */
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  padding: 1rem 0;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00ffd1;            /* acento primario */
+}
+
+/* Menú principal */
+.menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.menu > li {
+  position: relative;
+}
+
+/* Enlaces de menú */
+.menu a {
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menu a:hover {
+  background: #00ffd1;       /* hover acento primario */
+  color: #11151f;
+  border-radius: 6px;
+}
+
+/* Submenú desplegable */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #1b2230;
+  min-width: 200px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.menu li:hover .submenu {
+  display: block;
+}
+
+.submenu li a:hover {
+  background: #00ffd1;       /* hover acento primario */
+  color: #11151f;
+}
+
+/*==================== HERO ====================*/
+/* Sección principal */
+.hero {
+  background: linear-gradient(to right, #04060a, #0d1118);
+  padding: 100px 0;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #00ffd1;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+/* Botón consulta */
+.boton {
+  background: #00ffd1;        
+  color: #11151f;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.boton:hover {
+  transform: scale(1.05);
+  background: #00e6c9;        /* versión más oscura de acento */
+}
+
+/*==================== SECCIONES GENERALES ====================*/
+/* Padding vertical para secciones */
+.seccion {
+  padding: 4rem 0;
+}
+
+/* Fondo alternado */
+.gris {
+  background: #11151f;
+}
+
+/* Títulos de sección */
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #00ffd1;
+}
+
+/*====================  SECCION SERVICIOS ====================*/
+
+/* Sección Servicios: cuadrícula 3x2 */
+.grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Cada servicio es un enlace completo */
+.servicio {
+  display: block;
+  background: #1b2230;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #ecf0f1;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.servicio img {
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+.servicio h3 {
+  color: #00ffd1;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.servicio p {
+  font-size: 0.95rem;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Hover para destacar */
+.servicio:hover {
+  transform: translateY(-8px);
+  background: #2a3246;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 992px) {
+  .grid-servicios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-servicios {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/*==================== CLIENTES ====================*/
+.logos-clientes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.logos-clientes img {
+  width: 120px;
+  filter: grayscale(1);
+  transition: filter 0.3s ease;
+}
+
+.logos-clientes img:hover {
+  filter: none;
+}
+
+/*==================== FORMULARIO ====================*/
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background: #222a38;
+  color: #ecf0f1;
+}
+
+.formulario-contacto button {
+  align-self: flex-end;
+  background: #00ffd1;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  color: #11151f;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.formulario-contacto button:hover {
+  background: #00e6c9;
+}
+
+/*==================== INFO-NEWSLETTER ====================*/
+/* Estilos para sección limpia de servicios y newsletter */
+.info-newsletter-clean {
+  padding: 60px 20px;
+  background-color: #0d0d0d; /* Fondo neutro oscuro, puedes cambiarlo */
+  color: #fff;
+}
+
+.dos-columnas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.columna {
+  flex: 1 1 300px;
+}
+
+.columna h3 {
+  color: #00ffd1;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.columna ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.columna ul li {
+  margin-bottom: 10px;
+}
+
+.columna ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.columna ul li a:hover {
+  color: #00ffd1;
+}
+
+.newsletter-form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.newsletter-form button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #00ffd1;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  opacity: 0.8;
+}
+
+
+/*==================== FOOTER ====================*/
+footer {
+  background-color: #11151f;
+  color: #ecf0f1;
+  padding: 20px 0;
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+}
+
+.redes-sociales a {
+  color: #ecf0f1;
+  margin-left: 15px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.redes-sociales a:hover {
+  color: #00ffd1;
+}
+
+/*==================== ANIMACIONES ====================*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*==================== MEDIA QUERIES ====================*/
+@media (max-width: 992px) {
+  .grid-servicios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    gap: 0;
+  }
+  .menu > li {
+    width: 100%;
+  }
+  .menu a {
+    padding: 1rem;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-servicios {
+    grid-template-columns: 1fr;
+  }
+  .footer-flex {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  .cuatro-columnas {
+    flex-direction: column;
+  }
+}
+
+
+/* Sección de datos de contacto físico */
+.info-contacto {
+  background-color: var(--color-secundario);
+  color: var(--color-blanco);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.info-contacto h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.info-contacto p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.info-contacto a {
+  color: var(--color-acento);
+  text-decoration: none;
+}
+
+.info-contacto a:hover {
+  color: #0ea5e9;
+}
+
+/* Botón pequeño para “Ver ubicación” */
+.boton-pequeno {
+  display: inline-block;
+  background-color: var(--color-acento);
+  color: var(--color-principal);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.boton-pequeno:hover {
+  background-color: #0ea5e9;
+}
